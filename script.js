@@ -30,8 +30,8 @@ function displayMovies(movies) {
     movies.forEach(movie => {
         const li = document.createElement('li');
         li.innerHTML = `
-            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
-            <span>${movie.title}</span>
+            <img class="poster-details" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+            <p class="movie-title">${movie.title}</p>
         `;
         li.onclick = () => showMovieDetails(movie.id); // Muestra detalles al hacer clic en la película
         movieList.appendChild(li);
@@ -52,19 +52,22 @@ async function showMovieDetails(movieId) {
 
         const titleMovie = document.createElement('P');
         titleMovie.textContent = title;
+        titleMovie.classList.add('titulo-2')
 
         const imageMovie = document.createElement('IMG');
         imageMovie.src = `https://image.tmdb.org/t/p/w500${poster_path}`;
-        imageMovie.style.width = '200px';
-        imageMovie.style.height = 'auto'; 
+        imageMovie.classList.add('poster-details')
 
         const descriptionMovie = document.createElement('P');
+        descriptionMovie.style.margin = '0';
         descriptionMovie.textContent = overview;
 
         const yearMovie = document.createElement('P');
-        yearMovie.textContent = release_date;
+        yearMovie.textContent = `Año de lanzamiento:  ${release_date}`;
+        yearMovie.classList.add('movie-title')
 
         movieDetails.classList.remove('hidden');
+        movieDetails.classList.add('details-items')
         movieDetails.appendChild(titleMovie)
         movieDetails.appendChild(imageMovie)
         movieDetails.appendChild(descriptionMovie)

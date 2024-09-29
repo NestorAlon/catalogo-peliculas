@@ -1,36 +1,72 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-padding-top: 0rem;
+}
+*, 
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
 }
 
+span {
+    font-size: 2rem;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #083344;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    font-weight: 600;
+    color: #ecfeff;
+    font-size: 4rem;
+}
+
+.titulo-2 {
+    font-weight: 700;
+    font-size: 4rem;
+    text-align: center;
+    margin-top: .5rem;
+}
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 95%;
+	max-width: 160rem;
+	margin: 0 auto;
 }
 
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 input[type="text"] {
-    padding: 10px;
-    width: 300px;
+    padding: 1rem;
+    width: 30rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: .5rem;
 }
 
 button {
-    padding: 10px 20px;
+    max-height: 5rem;
+    padding: 1rem 2rem;
     border: none;
-    background-color: #28a745;
+    background-color: #0891b2;
     color: #fff;
-    border-radius: 5px;
+    border-radius: .5rem;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 1rem;
 }
 
 button:hover {
@@ -40,14 +76,15 @@ button:hover {
 main {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 2rem;
 }
 
+
 section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ecfeff;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
     width: 100%;
 }
 
@@ -57,22 +94,67 @@ section {
 
 #movies li,
 #favorites-list li {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 #movies img {
-    max-width: 150px;
-    border-radius: 5px;
+    max-width: 15rem;
+    border-radius: .5rem;
     vertical-align: middle;
     cursor:pointer;
 }
 
 #details {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 #details img {
-    max-width: 200px;
-    border-radius: 5px;
+    max-width: 30rem;
+    border-radius: .5rem;
+}
+
+.movie-title {
+    font-size: 2rem;
+    text-align: center;
+    margin:  1rem 0 0 0;
+    
+    li {
+        list-style: decimal;
+        text-align: start;
+    }
+}
+
+.list-popular {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+.list-popular li {
+    list-style: none;
+}
+
+.details-items {
+    display: grid;
+    justify-items: center;
+    height: 80vh;
+}
+
+.favoritos {
+    background-color: #ecfeff;
+    font-size: 2rem;
+} 
+
+.favoritos li {
+    list-style: none;
 }
  
+
+.poster-details {
+    max-width: 20rem;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
